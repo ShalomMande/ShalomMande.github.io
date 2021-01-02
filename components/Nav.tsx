@@ -119,6 +119,11 @@ const Navbar = () => {
     }
   }
 
+  useEffect(() => {
+    setColourMode
+  }
+    
+
 
 
 
