@@ -55,6 +55,25 @@ const Navbar = () => {
         dark2[i].classList.toggle("light-black-bg")
       }
 
+      darkMode = false
+      localStorage.setItem("dark", "false")
+    } else {
+      const darkenElements = document.getElementsByClassName("dark-toggle")
+      const whiteElements = document.getElementsByClassName("white-toggle")
+      const dark2 = document.getElementsByClassName("dark2-toggle")
+      
+      for (var i = 0; i < darkenElements.length; i++) {
+        darkenElements[i].classList.toggle("black-bg")
+      }
+      for (var i = 0; i < whiteElements.length; i++) {
+        whiteElements[i].classList.toggle("white")
+      }
+      for (var i = 0; i < dark2.length; i++) {
+        dark2[i].classList.toggle("light-black-bg")
+      }
+
+      darkMode = true
+      localStorage.setItem("dark", "true")
     }
   }
 
