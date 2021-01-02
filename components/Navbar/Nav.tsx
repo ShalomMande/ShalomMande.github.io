@@ -125,6 +125,7 @@ const Navbar = () => {
   })
 
   return (
+    
     <nav className="dark2-toggle main">
       <div className="logo">
         <a href="#" className="main" draggable="false" rel="noreferrer">
