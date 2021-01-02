@@ -15,5 +15,12 @@ app.use(req, res, next) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 });
 
+app.get('/api', (req, res, next) => {
+  res.send("API status: Online.")
+});
+
+app.post('/api/email'. (req, res, next) => {
+
+})''
 
 app.listen(3001,  '0.0.0')
