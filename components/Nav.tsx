@@ -121,8 +121,21 @@ const Navbar = () => {
 
   useEffect(() => {
     setColourMode
-  }
+  })
+
+  return (
+    <nav className="dark2-toggle main">
+      <div className="logo">
+        <a href="#" className="main" draggable="false" rel="noreferrer">
+          <h4 style={{ fontWeight: 800 }} className="white-toggle">
+            Shalom Mande
+          </h4>
+        </a>
+      </div>
+    </nav>
+  )
     
+
 
 
 
