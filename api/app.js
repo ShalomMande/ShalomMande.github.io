@@ -43,6 +43,6 @@ app.post('/api/email'. (req, res, next) => {
         success: false
       });
     });
-})
+});
 
 app.listen(3001,  '0.0.0')
