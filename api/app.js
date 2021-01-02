@@ -20,7 +20,10 @@ app.get('/api', (req, res, next) => {
 });
 
 app.post('/api/email'. (req, res, next) => {
+  
+  console.log(req.body);
 
-})''
+  sendGrid.setApiKey('api')
+})
 
 app.listen(3001,  '0.0.0')
