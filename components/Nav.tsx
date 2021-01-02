@@ -161,6 +161,16 @@ const Navbar = () => {
           </span>
         </label>
       </ul>
+      <div
+        className={`burger ${active ? "toggle" : ""}`}
+        id="burger"
+        onClick={handleBurderClick}
+ 
+      >
+        <div className="line1 primary-bg"></div>
+        <div className="line2 primary-bg"></div>
+        <div className="line3 primary-bg"></div>
+      </div>
     </nav>
   )
     
