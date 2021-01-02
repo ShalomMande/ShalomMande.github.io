@@ -31,6 +31,15 @@ app.post('/api/email'. (req, res, next) => {
     subject: 'Website Contact',
     text: req.body.message
   };
+
+  sendGrid.send(msg)
+    .then(result => {
+      res.status(200).json({
+        success: true
+    });
+    .catch(err => {
+      console.log('error: ', err)
+    });
 })
 
 app.listen(3001,  '0.0.0')
