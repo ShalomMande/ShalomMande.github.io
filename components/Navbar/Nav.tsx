@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon, sun, moon } from "@fontawesome/react-fontawesome"
-import '../styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import '../styles/nav'
 
 const links = [
   {
