@@ -61,7 +61,7 @@ const Navbar = () => {
       const darkenElements = document.getElementsByClassName("dark-toggle")
       const whiteElements = document.getElementsByClassName("white-toggle")
       const dark2 = document.getElementsByClassName("dark2-toggle")
-      
+
       for (var i = 0; i < darkenElements.length; i++) {
         darkenElements[i].classList.toggle("black-bg")
       }
@@ -74,6 +74,48 @@ const Navbar = () => {
 
       darkMode = true
       localStorage.setItem("dark", "true")
+    }
+  }
+
+  function setColourMode() {
+    const check = document.getElementById("theme-toggle") as HTMLInputElement
+    check.defaultChecked = localStorage.getItem("dark") == "true"
+
+
+    if (localStorage.getItem("dark") == "true") {
+      const darkenElements = document.getElementsByClassName("dark-toggle")
+      const whiteElements = document.getElementsByClassName("white-toggle")
+      const dark2 = document.getElementsByClassName("dark2-toggle")
+
+      for (var i = 0; i < darkenElements.length; i++) {
+        darkenElements[i].classList.add("black-bg")
+      }
+      for (var i = 0; i < whiteElements.length; i++) {
+        whiteElements[i].classList.add("white")
+      }
+      for (var i = 0; i < dark2.length; i++) {
+        dark2[i].classList.add("light-black-bg")
+      }
+
+      darkMode = true
+      localStorage.setItem("dark", "true")
+    } else {
+      const darkenElements = document.getElementsByClassName("dark-toggle")
+      const whiteElements = document.getElementsByClassName("white-toggle")
+      const dark2 = document.getElementsByClassName("dark2-toggle")
+
+      for (var i = 0; i < darkenElements.length; i++) {
+        darkenElements[i].classList.remove("black-bg")
+      }
+      for (var i = 0; i < whiteElements.length; i++) {
+        whiteElements[i].classList.remove("white")
+      }
+      for (var i = 0; i < dark2.length; i++) {
+        dark2[i].classList.remove("light-black-bg")
+      }
+
+      darkMode = false
+      localStorage.setItem("dark", "false")
     }
   }
 
