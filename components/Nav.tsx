@@ -132,14 +132,38 @@ const Navbar = () => {
           </h4>
         </a>
       </div>
+      <ul
+        className={`nav-links dark2-toggle white-bg ${
+          active ? "nav-active" : ""
+        }`}
+        id="nav-links"
+      >
+        {links.map((link, index) => (
+          <li key={index}>
+            <a
+              className="white-toggle main"
+              href={link.href}
+              draggable="false"
+              style={{ fontWeight: 500 }}
+              rel="noreferrer"
+            >
+              {link.text}
+            </a>
+          </li>
+        ))}
+        <label className="switch">
+          <input type="checkbox" id="theme-toggle" onInput={handleModeToggle} />
+          <span className="slider round">
+            <div style={{ marginTop: 2, color: "white" }}>
+              <FontAwesomeIcon icon="moon" style={{ marginLeft: 5 }} />
+              <FontAwesomeIcon icon="sun" style={{ marginLeft: 10 }} />
+            </div>
+          </span>
+        </label>
+      </ul>
     </nav>
   )
     
-
-
-
-
-
 
 
 }
